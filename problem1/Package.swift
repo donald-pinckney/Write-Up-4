@@ -1,5 +1,5 @@
 import PackageDescription
 
 let package = Package(
-    name: "problem2"
+    name: "problem1"
 )
