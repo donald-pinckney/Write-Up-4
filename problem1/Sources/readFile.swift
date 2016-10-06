@@ -1,5 +1,9 @@
 import Foundation
 
+/*
+    This function takes a filename as input, and reads each line sequentially.
+    It places each line as a String as a single entry into an array. Then it returns this array.
+*/
 func readLines(inFile: String) -> [String] {
     let fpo = fopen(inFile, "r")
     guard let fp = fpo else {
