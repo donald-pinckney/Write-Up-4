@@ -14,7 +14,7 @@ This is an example of what your code should roughly do.  You do not need to use 
 In the example below, the only thing the user types in, which is not actual output is the letter to guess (and then enter).
 
 Example:
-
+```
 Current word: _ _ _ _ _ _ _
 Already guessed letters: []
 Remaining body parts: 6
@@ -50,6 +50,7 @@ Current word: m a i l m a n
 Already guessed letters: [l, r, a, m, i, n]
 Remaining body parts: 5
 Congratulations, you win!
+```
 
 ## Rules for Writing the Homework
 Rule #1: You can not modify main.swift
