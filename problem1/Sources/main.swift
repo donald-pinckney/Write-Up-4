@@ -18,7 +18,7 @@ func printGameState() {
 	printRemainingBodyParts(bodyParts)
 }
 
-while bodyParts > 0 && hasWon(inProgressWord) {
+while bodyParts > 0 && !hasWon(inProgressWord) {
 	// First we print the state of the game
 	printGameState()
 
@@ -41,7 +41,7 @@ while bodyParts > 0 && hasWon(inProgressWord) {
 
 // If bodyParts == 0, then the game ended because of a loss.
 if bodyParts == 0 {
-	printLooseMessage()
+	printLoseMessage()
 } else {
 	printWinMessage()
 }
