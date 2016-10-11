@@ -1,12 +1,14 @@
 func printInProgressWord(_ inProgress: [Character]){
+  print("\u{001B}[2J") // Clears the screen
   for entry in inProgress{
-    print("\(entry)") // Test adding terminator: ""
+    print("\(entry)", terminator: "") // Test adding terminator: ""
   }
+  print("\n")
 }
 func printAlreadyGuessedLetters(_ inputGuessed: [Character]){
   print("So far, you've guessed:")
   for entry in inputGuessed {
-    print("\(entry)", terminator: "") // Test adding terminator: ""
+    print("\(entry)", terminator: " ") // Test adding terminator: ""
   }
   print("\n")
 }
@@ -37,7 +39,7 @@ func readGuess() -> Character {
 
 func hasMatch(ofGuess: Character, inWord: [Character]) -> Bool {
   for character in inWord {
-    if ofGuess == character{
+    if String(ofGuess).lowercased() == String(character).lowercased() {
       return true
     }
   }
@@ -47,7 +49,7 @@ func hasMatch(ofGuess: Character, inWord: [Character]) -> Bool {
 func update(currentInProgressWord: [Character], actualWord: [Character], guess: Character) -> [Character] {
   var output: [Character] = currentInProgressWord
   for index in 0..<actualWord.count {
-    if actualWord[index] == guess {
+    if String(actualWord[index]).lowercased() == String(guess).lowercased() {
       output[index] = guess
     }
   }
