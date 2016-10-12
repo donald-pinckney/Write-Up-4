@@ -1,16 +1,17 @@
 import Foundation
 
-//printGameState() functions
-func printInProgressWord() {
-	print("Current word: \(inProgressWord)")
+//functions in order of appearance
+
+func printInProgressWord(progress: [Character]) {
+	print("Progress: \(progress)")
 }
 
-func printAlreadyGuessedLetters() {
-	print("Already guessed letters: \(guessedLetters)")
+func printAlreadyGuessedLetters(guessed: [Character]) {
+	print("Already tried: \(guessed)")
 }
 
-func printRemainingBodyParts() {
-	print("Remains body parts: \(bodyParts)")
+func printRemainingBodyParts(body: Int) {
+	print("Body left: \(body)")
 }
 
 //while loop functions
