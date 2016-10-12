@@ -16,30 +16,27 @@ func printRemainingBodyParts(body: Int) {
 
 //while loop functions
 func readGuess() -> Character {
-	print("Type a letter to guess: ", terminator: "")
+	print("Guess a letter: ", terminator: "")
 	let guess = Character(readLine()!)
 	return guess
 }
 
-func hasWon(inProgressWord: [Character])-> Bool {
+func hasWon(_ inProgressWord: [Character]) -> Bool {
+	var wonHas: Bool = false
 	if inProgressWord == randomWord {
-		return true
-	} 
-	else {
-		return false
+		wonHas = true 
 	}
-	 
+	return wonHas
 }
 
 func hasMatch(ofGuess: Character, inWord: [Character]) -> Bool {
+	var matchHas: Bool = false
 	for letter in inWord {
-		if letter == ofGuess {
-			return true
+		if ofGuess == letter {
+			matchHas = true
 		}
 	}
-	else {
-		return false
-	}
+	return matchHas
 }
 
 func update(currentInProgressWord: [Character], actualWord: [Character], guess: Character) -> [Character] {
