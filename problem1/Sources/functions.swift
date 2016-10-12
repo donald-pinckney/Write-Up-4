@@ -3,20 +3,28 @@ import Foundation
 //functions in order of appearance
 
 func printInProgressWord(_ inProgressWord: [Character]) {
-	print("Progress: \(inProgressWord)")
+	print("Progress: ", terminator: "")
+	for letter in inProgressWord {
+		print(letter, terminator: "")
+	}
+	print("")
 }
 
 func printAlreadyGuessedLetters(_ guessedLetters: [Character]) {
-	print("Already tried: \(guessedLetters)")
+	print("Already tried: ", terminator: "")
+	for guess in guessedLetters.sorted() {
+		print(guess, terminator: ",")
+	}
+	print("")
 }
 
 func printRemainingBodyParts(_ bodyParts: Int) {
-	print("Body left: \(bodyParts)")
+	print("Body parts left: \(bodyParts)")
 }
 
 func readGuess() -> Character {
 	print("Guess a letter: ", terminator: "")
-	let guess = Character(readLine()!)
+	let guess = Character(readLine()!) 
 	return guess
 }
 
@@ -54,8 +62,13 @@ func printBadGuessMessage() {
 
 func printLoseMessage() {
 	print("Your dead :|")
+	print("The word was...", terminator: "")
+	for letter in randomWord {
+		print(letter, terminator: "")
+	}
+	print("")
 }
 
 func printWinMessage() {
-	print("Pure luck :)")
+	print("Pure luck ;)")
 }
