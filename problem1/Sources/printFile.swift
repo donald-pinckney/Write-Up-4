@@ -1,13 +1,13 @@
 func printInProgressWord(_ inProgressWord: [Character]){
-	print("Current word: /(_ inProgressWord)")
+	print("Current word: \(inProgressWord)")
 }
 
-func printAlreadyGuessedLetter(_ guessedLetters: [Character]){
-	print("Already guessed letters: /(_ guessedLetters")
+func printAlreadyGuessedLetters(_ guessedLetters: [Character]){
+	print("Already guessed letters: \(guessedLetters)")
 }
 
 func printRemainingBodyParts(_ bodyParts: Int){
-	print("Remaining Body Parts: /(_ bodyParts")
+	print("Remaining Body Parts: \(bodyParts)")
 }
 
 func printBadGuessMessage(){
@@ -15,9 +15,11 @@ func printBadGuessMessage(){
 }
 
 func printLoseMessage(){
-	"Too bad, you were hanged! D:"
+	print(randomWord)
+	print("Too bad, you were hanged! D:")
 }
 
 func printWinMessage(){
-	"Congratulations, you win!"
+	print(randomWord)
+	print("Congratulations, you win!")
 }

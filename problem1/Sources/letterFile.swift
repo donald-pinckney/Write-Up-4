@@ -1,4 +1,4 @@
-func hasmatch(ofGuess: Int, inWord: [Character]) -> Bool{
+func hasMatch(ofGuess: Character, inWord: [Character]) -> Bool{
 	var word = false
 	for x in inWord{
 		if ofGuess == x{
@@ -10,19 +10,19 @@ func hasmatch(ofGuess: Int, inWord: [Character]) -> Bool{
 }
 
 func update(currentInProgressWord: [Character], actualWord: [Character], guess: Character) -> [Character]{
-	var match = []
+	var match: [Character] = []
 	for x in 0..<currentInProgressWord.count{
-		if actualword[x] == guess{
+		if actualWord[x] == guess{
 			match.append(guess)
 		}
 		else{
-			match.append(_)
+			match.append(inProgressWord[x])
 		}
-	}	
-	return match	
+	}
+	return match
 }
 
-func hasWon(check: [Character]){
+func hasWon(_ check: [Character]) -> Bool{
 	if check == randomWord{
 		return true
 	}
