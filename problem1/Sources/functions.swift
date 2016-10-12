@@ -2,16 +2,16 @@ import Foundation
 
 //functions in order of appearance
 
-func printInProgressWord(progress: [Character]) {
-	print("Progress: \(progress)")
+func printInProgressWord(_ inProgressWord: [Character]) {
+	print("Progress: \(inProgressWord)")
 }
 
-func printAlreadyGuessedLetters(guessed: [Character]) {
-	print("Already tried: \(guessed)")
+func printAlreadyGuessedLetters(_ guessedLetters: [Character]) {
+	print("Already tried: \(guessedLetters)")
 }
 
-func printRemainingBodyParts(body: Int) {
-	print("Body left: \(body)")
+func printRemainingBodyParts(_ bodyParts: Int) {
+	print("Body left: \(bodyParts)")
 }
 
 //while loop functions
@@ -50,14 +50,14 @@ func update(currentInProgressWord: [Character], actualWord: [Character], guess: 
 }
 
 func printBadGuessMessage() {
-	print("Better luck next time. It looks like you'll need it.")
+	print("Ouch :(")
 }
 
 //end game functions
 func printLoseMessage() {
-	print("Sorry, you're pretty much dead now since you have no body left :|")
+	print("Your dead :|")
 }
 
 func printWinMessage() {
-	print("A superb demonstration of wizardry.")
+	print("Pure luck :)")
 }
