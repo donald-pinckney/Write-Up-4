@@ -14,7 +14,6 @@ func printRemainingBodyParts(_ bodyParts: Int) {
 	print("Body left: \(bodyParts)")
 }
 
-//while loop functions
 func readGuess() -> Character {
 	print("Guess a letter: ", terminator: "")
 	let guess = Character(readLine()!)
@@ -53,7 +52,6 @@ func printBadGuessMessage() {
 	print("Ouch :(")
 }
 
-//end game functions
 func printLoseMessage() {
 	print("Your dead :|")
 }
