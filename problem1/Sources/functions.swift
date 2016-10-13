@@ -20,6 +20,63 @@ func printAlreadyGuessedLetters(_ guessedLetters: [Character]) {
 
 func printRemainingBodyParts(_ bodyParts: Int) {
 	print("Body parts left: \(bodyParts)")
+	if bodyParts == 6 {
+		print("______")
+		print("|    |")
+		print("|")
+		print("|")
+		print("|")
+		print("|_________")
+	}
+	else if bodyParts == 5 {
+		print("______")
+		print("|    |")
+		print("|    0")
+		print("|")
+		print("|")
+		print("|_________")
+	}
+	else if bodyParts == 4 {
+		print("______")
+		print("|    |")
+		print("|    0")
+		print("|    |")
+		print("|")
+		print("|_________")
+	}
+	else if bodyParts == 3 {
+		print("______")
+		print("|    |")
+		print("|    0")
+		print("|   /|")
+		print("|")
+		print("|_________")
+	}
+	else if bodyParts == 2 {
+		print("______")
+		print("|    |")
+		print("|    0")
+		print("|   /|| ")
+		print("|")
+		print("|_________")
+	}
+	else if bodyParts == 1 {
+		print("______")
+		print("|    |")
+		print("|    0")
+		print("|   /|| ")
+		print("|    /")
+		print("|_________")
+	}
+	else {
+		print("______")
+		print("|    |")
+		print("|    0")
+		print("|   /|| ")
+		print("|    /|")
+		print("|_________")
+	}
+	print("\n")
 }
 
 func readGuess() -> Character {
@@ -66,9 +123,14 @@ func printLoseMessage() {
 	for letter in randomWord {
 		print(letter, terminator: "")
 	}
-	print("")
+	print("...Look it up.")
 }
 
 func printWinMessage() {
-	print("Pure luck ;)")
+	print("Nice job! :)")
+	print("Now look up ", terminator: "")
+	for letter in randomWord {
+		print(letter, terminator: "")
+	}
+	print(" in the dictionary.")
 }
