@@ -26,3 +26,20 @@ func update(currentInProgressWord: [Character], actualWord: [Character], guess: 
 func hasWon(_ inProgressWord: [Character]) -> Bool {
   return inProgressWord == randomWord
 }
+
+func assembleWord(wordToAssemble: [Character]) -> String {
+  var assembledWord = ""
+  for x in wordToAssemble {
+    assembledWord += String(x)
+  }
+  return assembledWord
+}
+
+func assembleGuess(guessToAssemble: [Character]) -> String {
+  var guessWithSpaces = ""
+  for x in guessToAssemble {
+    guessWithSpaces += String(x)
+    guessWithSpaces += " "
+  }
+  return guessWithSpaces
+}
