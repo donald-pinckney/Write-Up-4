@@ -22,6 +22,14 @@ func hasMatch(ofGuess: Character, inWord: [Character]) -> Bool {
 			doesItHaveAMatch = true
 		}
 	}
+	for i in 0..<guessedLetters.count {
+		if ofGuess == guessedLetters[i] {
+			bodyParts += 1//undoes your guessing a letter you've already guessed
+			guessedLetters.remove(at: i)
+			print()
+			print("You already guessed", ofGuess)
+		}
+	}
 	return doesItHaveAMatch
 }
 
@@ -53,7 +61,7 @@ func printWinMessage() {
 //tells you that you messed up
 func printBadGuessMessage() {
 	print()
-	print("Sorry, your guess is not in the word.")
+	print("Ouch! You got amputated.")
 }
 
 //shows you what you've already guessed
