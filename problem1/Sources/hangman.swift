@@ -57,8 +57,6 @@ func printBadGuessMessage() {
 }
 
 //shows you what you've already guessed
-//How to sabotage somebody else's game:
-//tell them to guess a letter that they've already guessed
 func printAlreadyGuessedLetters(_ guessedLetters: [Character]) {
 	let stringVersionOfAlreadyGuessedLetters = String(guessedLetters)
 	print("already guessed letters:", stringVersionOfAlreadyGuessedLetters)
