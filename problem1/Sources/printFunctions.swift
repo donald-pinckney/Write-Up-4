@@ -20,7 +20,7 @@ func printWinMessage() {
 
 // This function prints a string of text saying that the player has lost
 func printLoseMessage() {
-  print("I'm sorry, you have lost. The full word was '\(assembleWord(wordToAssemble: randomWord))', and you managed to guess \(assembleGuess(guessToAssemble: inProgressWord)).")
+  print("I'm sorry, you have lost. The full word was '\(assembleWord(wordToAssemble: randomWord))', and you managed to guess '\(assembleGuess(guessToAssemble: inProgressWord))'.")
 }
 
 // This function prints a string of text saying that a character is not in a word

@@ -41,5 +41,6 @@ func assembleGuess(guessToAssemble: [Character]) -> String {
     guessWithSpaces += String(x)
     guessWithSpaces += " "
   }
+  guessWithSpaces.remove(at: guessWithSpaces.index(before: guessWithSpaces.endIndex))
   return guessWithSpaces
 }
