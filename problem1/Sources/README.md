@@ -54,9 +54,6 @@ Congratulations, you win!
 
 ## Rules for Writing the Homework
 Rule #1: You can not modify main.swift
-Rule #2: You can not modify main.swift
-Rule #3: You can not modify main.swift
-Rule #4: If you have some exception for modifying main.swift, talk to me abut why.
 
 ## Testing
 There is no testing files or data for this. You have creative license to make the game look how you want, as long as you color inside the lines of main.swift. However, **PLEASE TEST YOUR CODE MANUALLY TO MAKE SURE IT ACTUALLY WORKS!**
